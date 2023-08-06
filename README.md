@@ -43,3 +43,66 @@ Transfer Learning: Chatbots can leverage transfer learning to use models pre-tra
 
 # Code example
 
+# Sentiment_bot.py
+
+Step 1: Importing Libraries
+
+We begin by importing the necessary libraries. In this case, we import the TextBlob class from the textblob library. TextBlob is a simple NLP library that allows us to perform sentiment analysis and other text processing tasks easily.
+
+Step 2: Defining the Sentiment Analysis Function
+
+Next, we define a function named get_sentiment. This function will be responsible for analyzing the sentiment of the user's input. Inside the function, we create a TextBlob object using the user's input text. The TextBlob class automatically performs sentiment analysis on the input text.
+
+Step 3: Getting Sentiment Polarity
+
+We extract the sentiment polarity from the TextBlob object using the sentiment.polarity property. The polarity score ranges from -1 to 1, where -1 indicates a negative sentiment, 0 indicates a neutral sentiment, and 1 indicates a positive sentiment.
+
+Step 4: Determining the Sentiment Label
+
+Based on the polarity score, we determine the sentiment label. If the polarity is less than 0, we classify it as "negative." If the polarity is exactly 0, we consider it "neutral." Otherwise, if the polarity is greater than 0, we classify it as "positive."
+
+Step 5: Chatbot Loop
+
+We create a simple chatbot loop using a while loop. The chatbot starts by greeting the user and introducing itself as the "Sentiment Analysis Bot." It then prompts the user to input text. The loop will keep asking for user input until the user types "exit."
+
+Step 6: User Input Processing
+
+For each user input, the chatbot checks if the user wants to end the conversation by typing "exit." If not, it passes the user's input to the get_sentiment function to determine the sentiment.
+
+Step 7: Displaying Sentiment Result
+
+After analyzing the sentiment, the chatbot displays the detected sentiment back to the user with an appropriate message.
+
+Step 8: Exiting the Conversation
+
+If the user types "exit," the chatbot says goodbye and ends the conversation.
+
+# Emotion_bot.py
+
+Step 1: Importing Libraries
+
+We begin by importing the necessary libraries. In this case, we import the text2emotion library, which provides a straightforward interface for detecting emotions in text.
+
+Step 2: Defining the Emotion Detection Function
+
+Next, we define a function named get_emotion. This function will be responsible for analyzing the dominant emotion in the user's input. Inside the function, we use the get_emotion function from the text2emotion library to perform emotion detection on the input text.
+
+Step 3: Getting the Dominant Emotion
+
+The get_emotion function returns a dictionary containing the detected emotions and their respective scores. We extract the dominant emotion by finding the emotion with the highest score. This will give us the emotion that is most strongly expressed in the input text.
+
+Step 4: Chatbot Loop
+
+We create a simple chatbot loop using a while loop, similar to the previous example. The chatbot starts by greeting the user and introducing itself as the "Emotion Detection Bot." It then prompts the user to input text. The loop will keep asking for user input until the user types "exit."
+
+Step 5: User Input Processing
+
+For each user input, the chatbot checks if the user wants to end the conversation by typing "exit." If not, it passes the user's input to the get_emotion function to determine the dominant emotion.
+
+Step 6: Displaying Emotion Result
+
+After detecting the dominant emotion, the chatbot displays it back to the user with an appropriate message.
+
+Step 7: Exiting the Conversation
+
+If the user types "exit," the chatbot says goodbye and ends the conversation.
